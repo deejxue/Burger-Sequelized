@@ -5,11 +5,11 @@ var db = require("../models");
 // ====================================
 module.exports = function(app) {
   // get all the burgers and list them with this GET method 
-  app.get('/api', function(req, res) {
+  app.get('/', function(req, res) {
     // findAll returns all entries for a table when used with no options
       db.burgers.findAll().then(function(burgers) {
       // We have access to the burgers as an argument inside of the callback function
-        res.redirect('../layouts/index', {burgers:burgers});
+        res.render('index', {burgers:burgers});
     });
   });
 
