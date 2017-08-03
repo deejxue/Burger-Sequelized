@@ -1,6 +1,3 @@
-'use strict';
-var Sequelize = require("sequelize");
-
 module.exports = function(sequelize, DataTypes) {
   var burger = sequelize.define('burgers', {
       burger_name: {

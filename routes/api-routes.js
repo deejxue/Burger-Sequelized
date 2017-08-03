@@ -14,17 +14,17 @@ module.exports = function(app) {
   });
 
   // create new burgers with this POST method 
-  app.post('/api/create', function (req, res) {
+  app.post('/api/', function (req, res) {
       db.burgers.create({ 
           burger_name: req.body.burger_name,
           devoured: false
       }).then(function(dbBurgers) {
-          res.redirect('/api');
+          res.redirect('/');
       });
     });
 
   // update the burger list with this PUT method
-  app.put('/api/burgers/update/:id', function (req, res) {
+  app.put('/api/:id', function (req, res) {
      db.burgers.update({ 
       devoured: req.body.devoured 
   }, { 
@@ -32,18 +32,18 @@ module.exports = function(app) {
           id: req.body.id
       } 
     }).then(function(dbBurgers) {
-      res.redirect('/api');
+      res.redirect('/');
     });
   });
 
   // delete a burger with this DELETE method
-  app.delete('/api/delete/:id', function(req, res){
+  app.delete('/api/:id', function(req, res){
     db.burgers.destroy({ 
       where: { 
           id: req.body.id 
       }
     }).then(function(dbBurgers) {
-      res.redirect('/api');
+      res.redirect('/');
     });
   });
 };

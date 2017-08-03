@@ -16,12 +16,10 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }))
 app.use(methodOverride('_method'));
 app.use(express.static(__dirname + '/public'));
 
-
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 var routes = require('./routes/api-routes.js')(app);
-
 
 db.sequelize.sync({force: true}).then(function() {
     app.listen(PORT, function() {
