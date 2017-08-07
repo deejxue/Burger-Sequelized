@@ -1,14 +1,15 @@
-# burger
+# Burger -- Sequelized....
 
-#Eat Da Burger-- we gon' devour it! ;)
+#   Eatin' Da Burgers, Sequel style!
 
-So you like burgers, eh?  Well I've got some for you to eat..... Try these on for size and munch away.
+MORE burgers???  Oh no, someone has stolen my ORM and replaced it with Sequelize.  Hurry and help me eat the burgers and make new types of burgers!!
+
 ______________________________________________________________________________________________________
 
 * Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
 
 * Whenever a user submits a burger's name, your app will display the burger on the left side of the page -- waiting to be devoured.
 
-* Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger will move to the right side of the page.
+* Each burger in the Eat Me area also has a `Devour it!` button. When the user clicks it, the burger will move to the "Mmmmm" section of the page.
 
-* Your app will store every burger in a database, whether devoured or not.
+* Every burger is stored in a database, whether devoured or not.  New burgers are added to the database for "consumption", and can be moved to the list of eaten or not eaten by a button.
