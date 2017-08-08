@@ -8,7 +8,7 @@
     
           <h2> Pick a burger!! </h2>
           <ul>
-            {{#each burgers}}
+            {{#each burger}}
               {{#unless this.devoured}}
 
                 <li>
@@ -34,7 +34,7 @@
           <h2> MMMM, these were good! </h2>
 
           <ul>
-            {{#each burgers}}
+            {{#each burger}}
               {{#if this.devoured}}
 
                 <li>

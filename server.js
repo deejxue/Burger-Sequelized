@@ -7,7 +7,7 @@ var methodOverride = require("method-override");
 var db = require("./models");
 // Initialize app, set PORT to 3000
 var app = express();
-var PORT = process.env.PORT || 3000;
+// var PORT = process.env.PORT || 3000;
 
 // Enable Body Parser
 app.use(bodyParser.json());
@@ -34,8 +34,7 @@ app.use("/", routes);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync({ force: true }).then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
+var port = process.env.PORT || 3000;
+db.sequelize.sync().then(function() {
+  app.listen(port);
 });

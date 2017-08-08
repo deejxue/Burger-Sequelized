@@ -1,6 +1,6 @@
 // Import Sequelize library for `Sequelize.literal`.
 module.exports = function(sequelize, DataTypes) {
-  var Burger = sequelize.define("Burger", {
+  var burger = sequelize.define("burger", {
     burger_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -13,5 +13,5 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: false
     }
   });
-  return Burger;
+  return burger;
 };
