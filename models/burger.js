@@ -1,11 +1,17 @@
 // Import Sequelize library for `Sequelize.literal`.
-var Sequelize = require('sequelize');
-
 module.exports = function(sequelize, DataTypes) {
-    var Burger = sequelize.define('Burger', {
-            burger_name: Sequelize.STRING,
-            devoured: Sequelize.BOOLEAN,
-            })
-    // Return model defined.
-    return Burger;
+  var Burger = sequelize.define("Burger", {
+    burger_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 140]
+      }
+    },
+    devoured: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    }
+  });
+  return Burger;
 };
